@@ -166,6 +166,67 @@ if(@$consultas == 'ocultar'){
 </div>
 
 
+<!-- Modal receita -->
+<div class="modal fade" id="modalReceita" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" style="width:80%">
+		<div class="modal-content">
+			<div class="modal-header bg-primary text-white">
+				<h4 class="modal-title" id="exampleModalLabel"><span id="nome_receita"></span>				
+
+				</h4>
+				
+				<button id="btn-fechar-receita" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-top: -25px">
+					<span class="text-white" aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form method="POST" action="rel/receita_class.php" target="_blank">
+			<div class="modal-body">
+				<div class="row">
+						<div class="col-md-3">	
+								<label>Remédio</label>
+								<input type="text" id="remedio" class="form-control" placeholder="Ciprofloxacino 500 mg" >			
+							</div>
+
+							<div class="col-md-3">	
+								<label>Quantidade</label>
+								<input type="text" id="quantidade" class="form-control" placeholder="1 Caixa, 14 Compromidos, etc">			
+							</div>	
+						
+				
+					<div class="col-md-5">	
+								<label>Forma de Uso</label>
+								<input type="text" id="uso" class="form-control" placeholder="1 Comprimido a cada duas horas">			
+							</div>	
+
+							<div class="col-md-1" style="margin-top: 22px">
+								
+								<button onclick="inserirItem()" type="button" class="btn btn-success"><i class="fa fa-check"></i></button>	
+							</div>	
+				</div>
+
+				<div class="row" style="margin-top: 20px; border-top: 1px solid #595858">
+					<div id="listar_remedios">
+						
+					</div>
+				</div>
+
+				<br>
+				<input type="hidden" name="id" id="id_receita">
+				<small><div id="mensagem_receita" align="center" class="mt-3"></div></small>		
+			</div>
+
+			<div class="modal-footer"> 
+
+			<a onclick="limparReceita()" class="btn btn-danger">Limpar Receita</a>
+
+				<button type="submit" class="btn btn-primary">Gerar Receita</button>
+			</div>
+			</form>		
+		</div>
+	</div>
+</div>
+
+
 
 
 

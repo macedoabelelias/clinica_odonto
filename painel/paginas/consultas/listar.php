@@ -213,6 +213,8 @@ echo <<<HTML
 
 		<big><a class="btn btn-success-light btn-sm " href="#" onclick="exames('{$cliente}', '{$nome_paciente}')" title="Solicitar Exames"><i class="fa fa-files-o"></i></a></big>
 	
+		<big><a class="btn btn-primary-light btn-sm " href="#" onclick="receita('{$cliente}', '{$nome_paciente}')" title="Gerar Receita"><i class="fa fa-file-pdf-o"></i></a></big>
+
 		<big><a class="btn btn-danger-light btn-sm " href="#" onclick="atestado('{$cliente}', '{$nome_paciente}')" title="Gerar Atestado"><i class="fa fa-file-pdf-o"></i></a></big>
 
 		<big><a class="btn btn-dark-light btn-sm " href="#" onclick="odontograma('{$cliente}', '{$nome_paciente}', '{$id_odo}', '{$descricao_odo}','{$evolutivo_odo}')" title="Editar Odontograma"><i class="fa fa-tooth"></i></a></big>
@@ -303,6 +305,13 @@ function anamnese(paciente, nome){
 		$('#nome_permissoes').text(nome);	
 		$('#modalAnamnese').modal('show');
 		listarAnamnese(paciente);
+}
+
+function receita(paciente, nome){
+		$('#id_receita').val(paciente);	
+		$('#nome_receita').text(nome);	
+		$('#modalReceita').modal('show');
+		listarRemedios(paciente);
 }
 
 function atestado(paciente, nome){
