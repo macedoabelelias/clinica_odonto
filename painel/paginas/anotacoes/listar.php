@@ -79,7 +79,7 @@ HTML;
 
 	<form method="POST" class="btn btn-dark-light btn-sm" action="rel/anotacoes_class.php" target="_blank" style="display:inline-block">
 		<input type="hidden" name="id" value="{$id}">
-		<button title="Imprimir" style="background:transparent; border:none; margin:0; padding:0"><i class="fa fa-file-pdf-o "></i></button>
+		<button title="Imprimir" style="background:transparent; border:none; margin:0; padding:0"><i class="fa fa-print"></i></button>
 	</form>
 
 

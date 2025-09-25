@@ -83,7 +83,7 @@ echo <<<HTML
 
 		<form   method="POST" action="rel/odontograma_class.php" target="_blank" style="display:inline-block">
 					<input type="hidden" name="id" value="{$id}">
-					<big><button class="btn btn-danger btn-sm" title="PDF"><i class="fa fa-file-pdf-o "></i></button></big>
+					<big><button class="btn btn-danger btn-sm" title="Odontograma"><i class="fa fa-file-pdf-o "></i></button></big>
 					</form>
 	
 </td>

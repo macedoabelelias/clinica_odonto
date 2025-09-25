@@ -674,8 +674,8 @@ if (@count($res1) > 0) {
 		<?php if ($pagina != 'vendas') { ?>
 			<div class="main-footer">
 				<div class="container-fluid pt-0 ht-100p">
-					Copyright © <?php echo date('Y'); ?> Desevolverdor <a href="https://www.monielsistemas.com.br" target="_blank"
-						class="text-primary"> hugocursos.com.br</a>. Todos
+					Copyright © <?php echo date('Y'); ?> Desevolverdor: <a href="https://www.monielsistemas.com.br" target="_blank"
+						class="text-primary"> AM Systems - Sistema Odontológico / Abel Macedo</a>. Todos
 					os direitos reservados
 				</div>
 			</div>
