@@ -88,7 +88,7 @@ if(@$consultas == 'ocultar'){
 						</div>
 						<div style="margin-bottom: 5px; border-bottom:1px solid #cecece; padding-bottom:3px">			
 							<span style="margin-right: 20px"><b>Tipo Sanguíneo</b> <span id="tipo_dados"></span></span>			
-						<span style="margin-right: 20px"><b>Sexo</b> <span id="sexo_dados"></span></span>
+						<span style="margin-right: 20px"><b>Gênero</b> <span id="sexo_dados"></span></span>
 						<span style=""><b>Convênio</b> <span id="convenio_dados"></span></span>
 						</div>
 						<div style="margin-bottom: 5px; border-bottom:1px solid #cecece; padding-bottom:3px">			
@@ -165,37 +165,35 @@ if(@$consultas == 'ocultar'){
 	</div>
 </div>
 
-
-<!-- Modal receita -->
-<div class="modal fade" id="modalReceita" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg" style="width:80%">
+<!-- Modal Receita -->
+<div class="modal fade" id="modalReceita" tabindex="-1" aria-labelledby="exampleModalLabel" 
+aria-hidden="true">
+	<div class="modal-dialog modal-xl" >
 		<div class="modal-content">
 			<div class="modal-header bg-primary text-white">
-				<h4 class="modal-title" id="exampleModalLabel"><span id="nome_receita"></span>				
-
+				<h4 class="modal-title" id="tituloModal"> <span id="nome_receita"> </span></h4>
 				</h4>
-				
-				<button id="btn-fechar-receita" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="margin-top: -25px">
-					<span class="text-white" aria-hidden="true">&times;</span>
-				</button>
+				<button id="btn-fechar-atestado" aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"><span
+						class="text-white" aria-hidden="true">&times;</span></button>
 			</div>
+
 			<form method="POST" action="rel/receita_class.php" target="_blank">
 			<div class="modal-body">
 				<div class="row">
-						<div class="col-md-3">	
-								<label>Remédio</label>
-								<input type="text" id="remedio" class="form-control" placeholder="Ciprofloxacino 500 mg" >			
+					<div class="col-md-3">	
+								<label>Medicamento</label>
+								<input type="text" id="remedio" class="form-control" placeholder="Descrição do Medicamento" >			
 							</div>
 
 							<div class="col-md-3">	
 								<label>Quantidade</label>
-								<input type="text" id="quantidade" class="form-control" placeholder="1 Caixa, 14 Compromidos, etc">			
+								<input type="text" id="quantidade" class="form-control" placeholder="Quantidade do Medicamento">			
 							</div>	
 						
 				
 					<div class="col-md-5">	
 								<label>Forma de Uso</label>
-								<input type="text" id="uso" class="form-control" placeholder="1 Comprimido a cada duas horas">			
+								<input type="text" id="uso" class="form-control" placeholder="Posologia do Medicamento">			
 							</div>	
 
 							<div class="col-md-1" style="margin-top: 22px">
@@ -214,18 +212,19 @@ if(@$consultas == 'ocultar'){
 				<input type="hidden" name="id" id="id_receita">
 				<small><div id="mensagem_receita" align="center" class="mt-3"></div></small>		
 			</div>
-
+	
+				
 			<div class="modal-footer"> 
 
 			<a onclick="limparReceita()" class="btn btn-danger">Limpar Receita</a>
 
 				<button type="submit" class="btn btn-primary">Gerar Receita</button>
 			</div>
+
 			</form>		
 		</div>
 	</div>
 </div>
-
 
 
 
@@ -279,7 +278,7 @@ if(@$consultas == 'ocultar'){
 
 
 
-<!-- Modal RaioX -->
+<!-- Modal Exames -->
 <div class="modal fade" id="modalExames" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
@@ -308,7 +307,7 @@ if(@$consultas == 'ocultar'){
 							</div>
 							<div class="col-md-6" style="margin-top: 27px;">	
 								
-								<input type="text" id="exame2" name="exame2" class="form-control" placeholder="Digite o nome do exame">			
+								<input type="text" id="exame2" name="exame2" class="form-control" placeholder="Digite o exame solicitado">			
 							</div>						
 				
 					
@@ -316,8 +315,8 @@ if(@$consultas == 'ocultar'){
 
 				<div class="row">
 					<div class="col-md-10">	
-								<label>Descrição para o Pedido Raio X</label>
-								<input type="text" id="descricao_raiox" name="descricao_raiox" class="form-control" placeholder="Texto do pedido de raio X">			
+								<label>Descreva sobre a Solicitação do Exame / Raios X</label>
+								<input type="text" id="descricao_raiox" name="descricao_raiox" class="form-control" placeholder="Solicitação de Exame, Raios X, etc.">			
 							</div>						
 				
 				
@@ -724,8 +723,7 @@ if(@$consultas == 'ocultar'){
 	}
 
 
-
-
+	
 
 function trocarExame(){	
 	var exame = $("#exame").val();

@@ -17,6 +17,8 @@ if($historico != "" and $historico != "Não"){
 	$limite = $historico;
 }
 
+$id_paciente = $id;
+$id_odontograma = $id;
 
 $query2 = $pdo->query("SELECT * FROM clientes where id = '$id'");
 $res2 = $query2->fetchAll(PDO::FETCH_ASSOC);
@@ -274,8 +276,9 @@ $nome_grupo = $res[$i]['nome'];
 			$descricao_ana = $res2[$i2]['descricao'];
 			$item = $res2[$i2]['item'];
 			$query3 = $pdo->query("SELECT * FROM itens_ana where id = '$item'");
-$res3 = $query3->fetchAll(PDO::FETCH_ASSOC);
-$nome = $res3[0]['nome'];					
+			$res3 = $query3->fetchAll(PDO::FETCH_ASSOC);
+			$nome = $res3[0]['nome'];	
+							
 		if($anamnese == 1){
 			echo '
 			<div> ';

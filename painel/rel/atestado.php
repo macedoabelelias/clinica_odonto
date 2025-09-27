@@ -132,11 +132,11 @@ if($marca_dagua == 'Sim'){ ?>
 </div>
 <div id="content" style="margin-top: 70px;">
 <div style="font-size: 15px;">
-	<p style="margin-left:60px">Atesto para fins trabalhistas, que o Sr(a) <b><?php echo $nome_paciente ?>
+	<p style="margin-left:30px">Atesto para fins trabalhistas, que o Sr(a) <b><?php echo $nome_paciente ?>
 </b> portador do CPF nº: <?php echo $cpf_paciente ?> <p>esteve sob cuidados profissionais no dia __/__/____ 
 	e deverá se afastar de suas atividades pelo período de <p><b><?php echo $dias ?> dias</b> por motivo de <?php echo $motivo ?>.</p>
-	<p style="margin-left:60px">Durante este período, o paciente deverá permanecer em repouso e evitar esforços físicos.</p>
-	<p style="margin-left:60px">Este atestado é válido para fins de comprovação junto ao empregador.</p>
+	<p style="margin-left:30px">Durante este período, o paciente deverá permanecer em repouso e evitar esforços físicos.</p>
+	<p style="margin-left:30px">Este atestado é válido para fins de comprovação junto ao empregador.</p>
 </div>
 <?php if($obs != ""){ ?>
 <div style="margin-top: 60px; border:1px solid #000; font-size: 14px; padding:5px">
